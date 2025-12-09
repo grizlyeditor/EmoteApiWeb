@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Premium Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- Animated Background -->
+    <div class="dashboard-bg">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+    
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="logo-section">
+                <div class="logo-animation">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h1>Premium <span class="gradient-text">Dashboard</span></h1>
+            </div>
+            
+            <div class="user-section">
+                <div class="user-avatar">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+                <div class="user-info">
+                    <span class="user-name" id="userName">Premium User</span>
+                    <span class="user-status online">
+                        <i class="fas fa-circle"></i>
+                        Online
+                    </span>
+                </div>
+                <button class="logout-btn" id="dashboardLogout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </header>
+        
+        <!-- Welcome Animation -->
+        <div class="welcome-animation" id="welcomeAnim">
+            <div class="welcome-content">
+                <div class="checkmark">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2>Access Granted!</h2>
+                <p>Welcome to Premium Portal</p>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card premium">
+                    <div class="stat-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>YouTube</h3>
+                        <p class="stat-value" id="youtubeStatus">Premium Active</p>
+                    </div>
+                    <div class="stat-shine"></div>
+                </div>
+                
+                <div class="stat-card premium">
+                    <div class="stat-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Telegram</h3>
+                        <p class="stat-value" id="telegramStatus">Connected</p>
+                    </div>
+                    <div class="stat-shine"></div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Security</h3>
+                        <p class="stat-value">Level 3</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features Section -->
+            <div class="features-section">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i>
+                    Premium Features
+                </h2>
+                
+                <div class="features-grid">
+                    <div class="feature-item animated">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Fast Access</h3>
+                        <p>Instant loading speeds</p>
+                    </div>
+                    
+                    <div class="feature-item animated">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Secure</h3>
+                        <p>Encrypted connections</p>
+                    </div>
+                    
+                    <div class="feature-item animated">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Ready</h3>
+                        <p>Optimized for all devices</p>
+                    </div>
+                    
+                    <div class="feature-item animated">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>Auto Update</h3>
+                        <p>Always latest version</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="actions-section">
+                <h2 class="section-title">
+                    <i class="fas fa-bolt"></i>
+                    Quick Actions
+                </h2>
+                
+                <div class="actions-grid">
+                    <button class="action-btn premium-action">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Refresh Access</span>
+                    </button>
+                    
+                    <button class="action-btn">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </button>
+                    
+                    <a href="/" class="action-btn">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                    
+                    <a href="/admin" class="action-btn admin-action">
+                        <i class="fas fa-crown"></i>
+                        <span>Admin Panel</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Update Channel -->
+            <div class="update-section">
+                <div class="update-card">
+                    <div class="update-header">
+                        <i class="fas fa-satellite-dish"></i>
+                        <h3>Update Channel</h3>
+                    </div>
+                    <div class="update-body">
+                        <p>Stay updated with latest features:</p>
+                        <a href="#" id="dashboardUpdateLink" class="update-link">
+                            <i class="fab fa-telegram"></i>
+                            https://t.me/updates
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <p>© 2024 Premium Portal | All rights reserved</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacy</a>
+                <a href="#"><i class="fas fa-file-alt"></i> Terms</a>
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Confetti -->
+    <div class="confetti-container" id="dashboardConfetti"></div>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/animation.js"></script>
+</body>
+</html>

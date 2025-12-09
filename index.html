@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Portal | Animated Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Pixel Stars Background -->
+    <div class="pixel-stars"></div>
+    
+    <!-- Pixel Moon -->
+    <div class="pixel-moon" id="pixelMoon">
+        <div class="moon-face">
+            <div class="moon-eye"></div>
+            <div class="moon-eye"></div>
+            <div class="moon-smile"></div>
+        </div>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container" id="mainContainer">
+        <div class="hero-animation">
+            <div class="title-wrapper">
+                <h1 class="main-title">
+                    <span class="title-char" style="--i:1">P</span>
+                    <span class="title-char" style="--i:2">R</span>
+                    <span class="title-char" style="--i:3">E</span>
+                    <span class="title-char" style="--i:4">M</span>
+                    <span class="title-char" style="--i:5">I</span>
+                    <span class="title-char" style="--i:6">U</span>
+                    <span class="title-char" style="--i:7">M</span>
+                    <span class="title-char" style="--i:8"> </span>
+                    <span class="title-char" style="--i:9">P</span>
+                    <span class="title-char" style="--i:10">O</span>
+                    <span class="title-char" style="--i:11">R</span>
+                    <span class="title-char" style="--i:12">T</span>
+                    <span class="title-char" style="--i:13">A</span>
+                    <span class="title-char" style="--i:14">L</span>
+                </h1>
+                <p class="subtitle">Exclusive Access • Premium Experience</p>
+            </div>
+            
+            <!-- Login Panel -->
+            <div class="login-panel" id="loginPanel">
+                <div class="panel-header">
+                    <i class="fas fa-lock"></i>
+                    <h2>Login Required</h2>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <input type="text" id="youtubeCode" placeholder="YouTube Code" class="premium-input">
+                    <div class="input-animation"></div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <input type="password" id="telegramCode" placeholder="Telegram Code" class="premium-input">
+                    <div class="input-animation"></div>
+                </div>
+                
+                <button class="premium-btn" id="loginBtn">
+                    <span class="btn-content">
+                        <i class="fas fa-rocket"></i>
+                        ACCESS PORTAL
+                    </span>
+                    <div class="btn-shine"></div>
+                </button>
+                
+                <div class="admin-link">
+                    <a href="/admin" class="admin-access">
+                        <i class="fas fa-crown"></i>
+                        Admin Access
+                    </a>
+                </div>
+                
+                <div class="update-channel">
+                    <i class="fas fa-satellite-dish"></i>
+                    <span>Update Channel: </span>
+                    <a href="#" id="updateLink">https://t.me/updates</a>
+                </div>
+            </div>
+            
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Access</h3>
+                    <p>Military-grade encryption</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Loading</h3>
+                    <p>Optimized performance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Works on all devices</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Animation -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="pixel-loader">
+                <div class="pixel-block"></div>
+                <div class="pixel-block"></div>
+                <div class="pixel-block"></div>
+                <div class="pixel-block"></div>
+            </div>
+            <p>Initializing Premium Experience...</p>
+        </div>
+    </div>
+    
+    <!-- Confetti Container -->
+    <div class="confetti-container"></div>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

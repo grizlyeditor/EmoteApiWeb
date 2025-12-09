@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Premium Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+    <!-- Admin Background -->
+    <div class="admin-bg"></div>
+    
+    <!-- Admin Container -->
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="admin-sidebar">
+            <div class="admin-logo">
+                <i class="fas fa-crown"></i>
+                <h2>ADMIN PANEL</h2>
+            </div>
+            
+            <nav class="admin-nav">
+                <a href="#" class="nav-item active" data-tab="credentials">
+                    <i class="fas fa-key"></i>
+                    <span>Credentials</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="analytics">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="users">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a>
+                <a href="/dashboard" class="nav-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </nav>
+            
+            <div class="admin-status">
+                <div class="status-indicator active"></div>
+                <span>Admin Online</span>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="admin-main">
+            <!-- Header -->
+            <div class="admin-header">
+                <div class="header-left">
+                    <h1>Admin Control Center</h1>
+                    <p>Secure Configuration Panel</p>
+                </div>
+                <div class="header-right">
+                    <button class="logout-btn" id="adminLogout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Content Area -->
+            <div class="admin-content">
+                <!-- Credentials Tab -->
+                <div class="tab-content active" id="credentialsTab">
+                    <div class="card premium-card">
+                        <div class="card-header">
+                            <i class="fas fa-lock"></i>
+                            <h3>Update Access Codes</h3>
+                        </div>
+                        
+                        <div class="card-body">
+                            <!-- YouTube Code -->
+                            <div class="config-group">
+                                <label class="config-label">
+                                    <i class="fab fa-youtube"></i>
+                                    YouTube Access Code
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="adminYoutubeCode" class="admin-input" 
+                                           placeholder="Enter new YouTube code">
+                                    <button class="generate-btn" id="generateYoutube">
+                                        <i class="fas fa-random"></i>
+                                        Generate
+                                    </button>
+                                </div>
+                                <div class="current-value">
+                                    Current: <span id="currentYoutubeCode">Loading...</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Telegram Code -->
+                            <div class="config-group">
+                                <label class="config-label">
+                                    <i class="fab fa-telegram"></i>
+                                    Telegram Access Code
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="adminTelegramCode" class="admin-input" 
+                                           placeholder="Enter new Telegram code">
+                                    <button class="generate-btn" id="generateTelegram">
+                                        <i class="fas fa-random"></i>
+                                        Generate
+                                    </button>
+                                </div>
+                                <div class="current-value">
+                                    Current: <span id="currentTelegramCode">Loading...</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Update Channel -->
+                            <div class="config-group">
+                                <label class="config-label">
+                                    <i class="fas fa-link"></i>
+                                    Update Channel URL
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="url" id="updateChannelUrl" class="admin-input" 
+                                           placeholder="https://t.me/yourchannel">
+                                </div>
+                            </div>
+                            
+                            <!-- Save Button -->
+                            <button class="save-btn" id="saveCredentials">
+                                <i class="fas fa-save"></i>
+                                Save All Changes
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Status Card -->
+                    <div class="card status-card">
+                        <div class="card-header">
+                            <i class="fas fa-server"></i>
+                            <h3>System Status</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="status-grid">
+                                <div class="status-item online">
+                                    <i class="fas fa-database"></i>
+                                    <span>Database</span>
+                                    <div class="status-badge">Online</div>
+                                </div>
+                                <div class="status-item online">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Security</span>
+                                    <div class="status-badge">Active</div>
+                                </div>
+                                <div class="status-item online">
+                                    <i class="fas fa-users"></i>
+                                    <span>Users Online</span>
+                                    <div class="status-badge" id="usersOnline">0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Analytics Tab -->
+                <div class="tab-content" id="analyticsTab">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Usage Analytics</h3>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="analyticsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
